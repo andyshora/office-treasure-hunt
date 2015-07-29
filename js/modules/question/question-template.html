@@ -1,0 +1,26 @@
+<div class="question-module">
+
+  <div class="question-module__question" ng-show="!complete">
+    <div ng-show="type=='text'">
+      <h1>{{text}}</h1>
+      <div class="question-module__answer">
+        <input type="text" ng-model="userAnswer"><button ng-click="checkAnswer()">Go</button>
+      </div>
+    </div>
+    <div ng-show="type=='qr'">
+      <h1>{{text}}</h1>
+    </div>
+    <div ng-show="type=='image'">
+      <img ng-src="{{imageUrl}}" alt="">
+    </div>
+  </div>
+  <div class="question-module__next" ng-show="complete">
+    <div ng-show="nextType=='text'">
+      <h1>{{nextText}}</h1>
+    </div>
+  </div>
+
+
+  <p>Complete: {{complete}}</p>
+
+</div>

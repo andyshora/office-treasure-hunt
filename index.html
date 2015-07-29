@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="huntApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>R/GA Treasure Hunt</title>
+  <meta name="description" content="Find the physical clue">
+  <script src="/js/vendor/angular.js"></script>
+  <script src="/js/vendor/underscore-min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/modules/lobby/lobby-directive.js"></script>
+  <script src="/js/modules/question/question-directive.js"></script>
+  <script src="/js/services/api-service.js"></script>
+  <script src="/js/services/hunt-service.js"></script>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body ng-controller="MainCtrl">
+  <lobby ng-show="!teamName"></lobby>
+  <p ng-show="teamName">Welcome, {{teamName}}!</p>
+  <button ng-click="resetHunt()">Reset</button>
+  <section ng-show="question && teamName">
+    <question
+      number="{{question.number}}"
+      type="{{question.question.type}}"
+      text="{{question.question.text}}"
+      answer="{{question.answer}}"
+      next-type="{{question.success.type}}"
+      next-text="{{question.success.text}}"
+      ></question>
+  </section>
+
+</body>
+</html>

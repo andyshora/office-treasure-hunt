@@ -3,6 +3,7 @@
   <h2 ng-show="error">{{error}}</h2>
 
   <div class="question-module__question" ng-show="!error && !complete">
+    <img src="/images/question.svg" alt="" class="svg">
     <div ng-show="type=='text'">
       <h1>Question {{number}}. {{text}}</h1>
       <div class="question-module__answer">
@@ -19,6 +20,7 @@
     <p ng-show="wrongMessage">{{wrongMessage}}</p>
   </div>
   <div class="question-module__next" ng-show="complete">
+    <img src="/images/map.svg" alt="" class="svg">
     <p>Well done! Now, the next location is...</p>
     <div ng-show="nextType=='text'">
       <h1>{{nextText}}</h1>

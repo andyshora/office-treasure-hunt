@@ -54,7 +54,7 @@
 
         for (var i = 1; i < n; i++) {
           var complete = !!localStorage.getItem(i + '');
-          $rootScope.completeStr += i + ':' + complete + ', ';
+          $rootScope.completeStr += 'Q' + i + ':' + complete + ', ';
           if (!complete) {
             valid = false;
             break;

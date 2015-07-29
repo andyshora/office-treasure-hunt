@@ -1,0 +1,23 @@
+{
+  "name": "office-treasure-hunt",
+  "version": "0.0.1",
+  "description": "R/GA Office Treasure Hunt",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyshora/office-treasure-hunt.git"
+  },
+  "author": "Andy Shora <andyshora@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyshora/office-treasure-hunt/issues"
+  },
+  "homepage": "https://github.com/andyshora/office-treasure-hunt",
+  "dependencies": {
+    "express": "~4.13.1"
+  }
+}

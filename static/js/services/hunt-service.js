@@ -46,11 +46,15 @@
 
     return {
       checkCompleteUpTo: function(n) {
+
+        $rootScope.completeStr = '';
+
         n = parseInt(n, 10);
         var valid = true;
 
         for (var i = 1; i < n; i++) {
           var complete = !!localStorage.getItem(i + '');
+          $rootScope.completeStr += i + ':' + complete + ', ';
           if (!complete) {
             valid = false;
             break;

@@ -29,6 +29,18 @@
           type: 'text',
           text: 'somewhere I might find postits'
         }
+      },
+      '#redelephant': {
+        number: 3,
+        question: {
+          type: 'text',
+          text: 'What is Tony\'s surname? (it\'s not Colombia)'
+        },
+        answer: 'Suarez',
+        success: {
+          type: 'text',
+          text: 'somewhere Tony might have a sneaky kip'
+        }
       }
     };
 

@@ -18,7 +18,12 @@
     $rootScope.teamName = HuntService.getTeamName();
 
     $scope.resetHunt = function() {
-      HuntService.resetHunt();
+      var ans = confirm("Are you sure you want to start the whole hunt again?");
+      if (ans) {
+        HuntService.resetHunt();
+        window.location = '/';
+      }
+
     };
 
   });

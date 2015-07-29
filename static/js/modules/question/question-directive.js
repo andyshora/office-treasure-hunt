@@ -19,7 +19,7 @@
       },
       link: function(scope) {
         scope.number = parseInt(scope.number, 10);
-
+        scope.wrongMessage = '';
       },
       controller: function($scope, $rootScope, HuntService) {
         $scope.complete = HuntService.isQuestionComplete($scope.number);
@@ -34,7 +34,10 @@
 
           if (success) {
             HuntService.setQuestionComplete($scope.number);
+            $scope.wrongMessage = '';
             $scope.complete = true;
+          } else {
+            $scope.wrongMessage = 'Nope! try again';
           }
 
         };

@@ -17,9 +17,13 @@
 </head>
 <body ng-controller="MainCtrl">
   <lobby ng-show="!teamName"></lobby>
-  <p ng-show="teamName">Welcome, {{teamName}}!</p>
-  <button ng-click="resetHunt()">Reset</button>
-  <section ng-show="question && teamName">
+  <p ng-show="teamName && question && question.number==1">Welcome, {{teamName}}!</p>
+  <button ng-click="resetHunt()" class="reset">Reset</button>
+  <section ng-show="teamName && !question">
+    <h1>Please go to the start of the quiz!</h1>
+    <p>You'll find the first beacon by the presentation screen. Good luck!</p>
+  </section>
+  <section ng-show="teamName && question">
     <question
       number="{{question.number}}"
       type="{{question.question.type}}"

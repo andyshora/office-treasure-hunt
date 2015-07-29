@@ -12,22 +12,22 @@
           type: 'text',
           text: 'She\'s light on her feet, but what\'s her middle name?'
         },
-        answer: 'Jane',
+        answer: 'Louise',
         success: {
           type: 'text',
-          text: 'Now go to some place'
+          text: 'somewhere breakfast is served!'
         }
       },
       '#brownbear': {
         number: 2,
         question: {
           type: 'text',
-          text: 'What color are brown bears?'
+          text: 'Which house would one appear in front of a magistrate nearby?'
         },
-        answer: 'Brown',
+        answer: 'Taylor House',
         success: {
           type: 'text',
-          text: 'Now go to some place'
+          text: 'somewhere I might find postits'
         }
       }
     };

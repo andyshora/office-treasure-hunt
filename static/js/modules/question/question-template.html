@@ -4,7 +4,7 @@
 
   <div class="question-module__question" ng-show="!error && !complete">
     <div ng-show="type=='text'">
-      <h1>{{text}}</h1>
+      <h1>Question {{number}}. {{text}}</h1>
       <div class="question-module__answer">
         <input type="text" ng-model="userAnswer"><button ng-click="checkAnswer()">Go</button>
       </div>
@@ -15,14 +15,17 @@
     <div ng-show="type=='image'">
       <img ng-src="{{imageUrl}}" alt="">
     </div>
+
+    <p ng-show="wrongMessage">{{wrongMessage}}</p>
   </div>
   <div class="question-module__next" ng-show="complete">
+    <p>Well done! Now, the next location is...</p>
     <div ng-show="nextType=='text'">
       <h1>{{nextText}}</h1>
     </div>
   </div>
 
 
-  <p>Complete: {{complete}}</p>
+  <!-- <p>Complete: {{complete}}</p> -->
 
 </div>

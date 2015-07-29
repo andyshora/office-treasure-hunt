@@ -7,13 +7,16 @@
 
     $rootScope.config = {};
 
-    if (window.location.hash) {
+    /*if (window.location.hash) {
       var question = HuntService.getQuestion(window.location.hash);
       console.log('question', question);
       if (question) {
         $scope.question = question;
       }
-    }
+    }*/
+
+    $scope.question = activeQuestion;
+    console.log('question', $scope.question);
 
     $rootScope.teamName = HuntService.getTeamName();
 
@@ -21,7 +24,7 @@
       var ans = confirm("Are you sure you want to start the whole hunt again?");
       if (ans) {
         HuntService.resetHunt();
-        window.location = '/';
+        // window.location = '/';
       }
 
     };

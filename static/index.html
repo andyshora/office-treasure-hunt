@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>You found a question!</title>
-  <meta name="description" content="Is it the right one? Click to find out...">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var activeQuestion = {{JSON.stringify(question)}};
+  </script>
   <script src="/js/vendor/angular.js"></script>
   <script src="/js/vendor/underscore-min.js"></script>
   <script src="/js/app.js"></script>
@@ -16,6 +19,7 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body ng-controller="MainCtrl">
+
   <lobby ng-show="!teamName"></lobby>
   <p ng-show="teamName && question && question.number==1">Welcome, {{teamName}}!</p>
   <button ng-click="resetHunt()" class="reset">Reset</button>

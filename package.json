@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/andyshora/office-treasure-hunt",
   "dependencies": {
-    "express": "~4.13.1"
+    "express": "~4.13.1",
+    "swig": "~1.4.2"
   }
 }

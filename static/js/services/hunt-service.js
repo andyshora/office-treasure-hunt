@@ -22,9 +22,9 @@
         number: 2,
         question: {
           type: 'text',
-          text: 'She\'s light on her feet, but what\'s her middle name?'
+          text: 'What color are brown bears?'
         },
-        answer: 'Jane',
+        answer: 'Brown',
         success: {
           type: 'text',
           text: 'Now go to some place'
@@ -33,7 +33,20 @@
     };
 
     return {
-      checkCompleteUpTo: function() {},
+      checkCompleteUpTo: function(n) {
+        n = parseInt(n, 10);
+        var valid = true;
+
+        for (var i = 1; i < n; i++) {
+          var complete = !!localStorage.getItem(i + '');
+          if (!complete) {
+            valid = false;
+            break;
+          }
+        }
+
+        return valid;
+      },
       setQuestionComplete: function(n) {
         localStorage.setItem(n + '', true);
       },

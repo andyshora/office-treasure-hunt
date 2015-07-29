@@ -14,6 +14,7 @@
 
         $scope.setTeamName = function() {
           HuntService.setTeamName($scope.teamName);
+          $rootScope.$broadcast('teamname:set');
         };
 
         function getData() {

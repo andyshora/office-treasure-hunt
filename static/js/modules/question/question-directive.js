@@ -20,11 +20,11 @@
       link: function(scope) {
         scope.number = parseInt(scope.number, 10);
 
-
-
       },
       controller: function($scope, $rootScope, HuntService) {
         $scope.complete = HuntService.isQuestionComplete($scope.number);
+
+        $scope.error = HuntService.checkCompleteUpTo($scope.number) ? '' : 'It looks like you\'ve skipped a question! Please go back to the last location!';
 
         $scope.checkAnswer = function() {
 

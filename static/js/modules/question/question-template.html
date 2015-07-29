@@ -1,6 +1,8 @@
 <div class="question-module">
 
-  <div class="question-module__question" ng-show="!complete">
+  <h2 ng-show="error">{{error}}</h2>
+
+  <div class="question-module__question" ng-show="!error && !complete">
     <div ng-show="type=='text'">
       <h1>{{text}}</h1>
       <div class="question-module__answer">
